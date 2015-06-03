@@ -3,5 +3,25 @@
 // Returns [[2,3,1],[7,8,4]]
 
 function splitPivotList(array, pivot) {
+    // base case
+    if (array.length === 1) { 
+        if (array[0] >= pivot) {
+            return [[],array]
+        } else {
+            return [array,[]]
+        }
+    }
 
+    var head = array[0];
+    var tail = array.slice(1);
+
+    var result = splitPivotList(tail, pivot);
+    
+    if (head >= pivot) {
+        result[1].unshift(head);
+        return result;
+    } else {
+        result[0].unshift(head);
+        return result;
+    }
 }
