@@ -2,6 +2,6 @@
 // [2,7,8,3,1,4] , 4
 // Returns [[2,3,1],[7,8,4]]
 
-function splitPivotList(array) {
+function splitPivotList(array, pivot) {
 
 }
