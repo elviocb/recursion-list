@@ -12,16 +12,16 @@ function splitPivotList(array, pivot) {
         }
     }
 
-    var head = array[0];
+    var head = [array[0]];
     var tail = array.slice(1);
 
     var result = splitPivotList(tail, pivot);
     
     if (head >= pivot) {
-        result[1].unshift(head);
-        return result;
+        result[1] = head.concat(result[1]);
     } else {
-        result[0].unshift(head);
-        return result;
+        result[0] = head.concat(result[0]);
     }
+    
+    return result;
 }
