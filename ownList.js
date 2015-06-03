@@ -4,7 +4,7 @@
 
 function ownList(array){
     // base case
-    if (array.length === 1) {return [[array[0]]]}
+    if (array.length === 1) {return [array]}
     
     var head = array[0];
     var tail = array.slice(1);
