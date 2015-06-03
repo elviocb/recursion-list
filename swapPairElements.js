@@ -5,5 +5,14 @@
 // Returns [6,3,1,8,5]
 
 function swapPairs(array) {
-    
+    // base case
+    if (array.length <= 1) { return array }
+
+    var head1 = array[0];
+    var head2 = array[1];
+    var tail = array.slice(2);
+
+    var result = swapPairs(tail);
+
+    return [head2, head1].concat(result);
 }
