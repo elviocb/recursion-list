@@ -7,8 +7,6 @@ function zipList(list1, list2){
     return list1.concat(list2); 
   }
 
-  var head1 = list1[0];
-  var head2 = list2[0];
   var tail1 = list1.slice(1);
   var tail2 = list2.slice(1);
 
