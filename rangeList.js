@@ -6,5 +6,14 @@
 // 3,3 Returns []
 
 function rangeList(start, end){
+  // base case 
+  if (start === end) { return [] }
 
-}
+  if (start < end) {
+    var result = rangeList(start +1, end);
+  } else {
+    var result = rangeList(start -1, end);
+  }
+  
+  return [start].concat(result);
+} 
